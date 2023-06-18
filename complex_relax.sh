@@ -2,7 +2,7 @@ gmx pdb2gmx -f dna_prot.pdb -ignh -glu 1 -his 1 -merge interactive -ss
 gmx editconf -f conf.gro -o boxed.gro -bt dodecahedron -d 1.5
 gmx solvate -cp boxed.gro -cs spc216.gro -o solvated.gro -p topol.top
 
-cp ../../2.4.5.3_46/*.mdp .
+cp ../*.mdp .
 gmx grompp -f ions.mdp -c solvated.gro -p topol.top -o ions.tpr -maxwarn 5
  gmx genion -s ions.tpr -o solvated_ions.gro -p topol.top -pname NA -nname CL -neutral # 3
 gmx make_ndx -f em.gro
