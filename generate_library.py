@@ -36,7 +36,7 @@ for n_stems in range(2,5):
                filename = ".".join(map(str,name))
                print(filename,ps,ss,length)
 
-               #plt.savefig(f"/home/akniga/RNA/{filename}.jpg")
+               #plt.savefig(f"~/RNA/{filename}.jpg")
                #plt.close()
                cmd = f"""f{path_to_rosetta_bin}/rna_denovo.static.linuxgccrelease -sequence "{ps}" -secstruct "{ss}" -nstruct 1 -out:f>
                cmds.append(cmd)
